@@ -1,4 +1,4 @@
-// ARRAY of OBJECTS
+// ARRAY of OBJECTS (Milestone 0)
 const ourTeam = [
     {
         name: "Wayne Barnett",
@@ -31,3 +31,12 @@ const ourTeam = [
         photo: "barbara-ramos-graphic-designer.jpg"
     },
 ]
+
+// Milestone 1
+for (let i = 0; i < ourTeam.length; i++) {
+    const element = ourTeam[i];
+    // console.log(element);
+    for (let key in element) {
+        console.log(element[key]);
+    }
+}
