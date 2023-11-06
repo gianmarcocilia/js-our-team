@@ -33,10 +33,24 @@ const ourTeam = [
 ]
 
 // Milestone 1
+// for (let i = 0; i < ourTeam.length; i++) {
+//     let curMember = ourTeam[i];
+//     // console.log(element);
+//     for (let key in curMember) {
+//         console.log(curMember[key]);
+//     }
+// }
+
+// Milestone 2
+const myList = document.querySelector("ul");
+// console.log(myL);
+myListInner = "";
 for (let i = 0; i < ourTeam.length; i++) {
-    const element = ourTeam[i];
+    let curMember = ourTeam[i];
     // console.log(element);
-    for (let key in element) {
-        console.log(element[key]);
+    for (let key in curMember) {
+        console.log(curMember[key]);
+        myListInner += `<li>${[key]}: ${curMember[key]}</li>`;
     }
 }
+myList.innerHTML = myListInner;
