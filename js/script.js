@@ -42,15 +42,32 @@ const ourTeam = [
 // }
 
 // Milestone 2
-const myList = document.querySelector("ul");
+// const myList = document.querySelector("ul");
 // console.log(myL);
-myListInner = "";
-for (let i = 0; i < ourTeam.length; i++) {
-    let curMember = ourTeam[i];
-    // console.log(element);
-    for (let key in curMember) {
-        console.log(curMember[key]);
-        myListInner += `<li>${[key]}: ${curMember[key]}</li>`;
-    }
+// myListInner = "";
+// for (let i = 0; i < ourTeam.length; i++) {
+//     let curMember = ourTeam[i];
+//     // console.log(element);
+//     for (let key in curMember) {
+//         console.log(curMember[key]);
+//         myListInner += `<li>${[key]}: ${curMember[key]}</li>`;
+//     }
+// }
+// myList.innerHTML = myListInner;
+
+// BONUS 1 e 2
+const wrapperElem = document.querySelector(".wrapper");
+let cardElem = "";
+for(let i = 0; i < ourTeam.length; i++) {
+    const curMember = ourTeam[i];
+    cardElem += `
+            <div class="card">
+            <img src="img/${curMember.photo}">
+                <div class="card-body">
+                    <h3 class="card-title">${curMember.name}</h3>
+                    <p class="card-text"><span>Ruolo:</span> ${curMember.role}</p>
+                </div>
+            </div>
+    `;
 }
-myList.innerHTML = myListInner;
+wrapperElem.innerHTML = cardElem;
